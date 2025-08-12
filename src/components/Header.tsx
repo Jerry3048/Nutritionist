@@ -1,0 +1,123 @@
+import { useState } from "react";
+import { NavLink } from "react-router";
+import ball from "/asset/Vector.png"
+import logo from "/asset/logo.png"
+import Hanburger from "/asset/Hanburger.png"
+import { FaArrowRight } from "react-icons/fa";
+import path1 from "/asset/path (1).png"
+import path2 from "/asset/path (2).png"
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Team", path: "/team" },
+    { name: "Process", path: "/process" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "Blog", path: "/blog" },
+    { name: <p className="md:bg-[#CBEA7B] md:p-2 md:rounded-lg flex md:justify-center md:items-center md:text-black">Contact Us</p>, path: "/contact" },
+  ];
+
+  return (
+    <nav className="bg-[#1A3129] shadow-md fixed top-0 left-0 w-full z-50 text-white">
+      <div className="bg-[#234338] w-[90%] h-[40px] md:h-[25px] mx-auto flex md:justify-between justify-center items-center mt-2 rounded-sm text-[12px]">
+        <img
+              src= {path1}
+              alt="ball"
+              className=" w-25 ml-[5%] hidden md:block"
+             
+            />
+        <div className="flex justify-center items-center">
+           <img
+              src= {ball}
+              alt="ball"
+              className="w-4 h-4 mr-1"
+             
+            />
+            Join Our Personalized Nutrtion Demo For Free
+            <FaArrowRight className="ml-3" />
+        </div>
+            <img
+              src= {path2}
+              alt="ball"
+              className="w-25 mr-[5%] hidden md:block"
+             
+            />
+        
+      </div>
+      <hr className="text-gray-700 mt-2 "/>
+      <div className="max-w-[90%] mx-auto ">
+        <div className="flex items-center justify-between h-16">
+         
+          <div className="flex font-bold  justify-center items-center space-x-2 text-white text-[20px]">
+              <img
+            src= {logo}
+            alt="logo"
+            className="w-7"
+           
+          />
+            <p>Nutritionist</p>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden sm:flex space-x-4 md:justify-center md:items-center text-white text-[13px] ">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  `hover:text-green-500 ${
+                    isActive ? "text-[#CBEA7B] font-semibold" : ""
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="sm:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white focus:outline-none"
+            >
+             <img
+              src= {Hanburger}
+              alt="Hanburger icon"
+              className="w-7"
+           
+          />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+       <div className={`fixed top-30 right-0 flex flex-col items-start w-[60%] md:hidden backdrop-blur-md bg-[#1A3129]/50  p-8  space-y-[10%] transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `block hover:text-green-950 ${
+                  isActive ? "text-[#CBEA7B] font-semibold" : ""
+                }`
+              }
+              onClick={() => setIsOpen(false)} // close menu after click
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </div>
+        
+        
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
