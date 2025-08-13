@@ -1,0 +1,128 @@
+{
+  "blogs":[
+  {
+    "id": 1,
+    "title": "The Power of Balanced Nutrition",
+    "category": "Nutrition",
+    "description": "Discover how balanced nutrition fuels your body, boosts immunity, and supports long-term health.",
+    "authorName": "Jane Doe",
+    "authorImage": "https://randomuser.me/api/portraits/women/1.jpg",
+    "date": "2025-08-11",
+    "time": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506806732259-39c2d0268443"
+  },
+  {
+    "id": 2,
+    "title": "10-Minute Healthy Recipes",
+    "category": "Recipes",
+    "description": "Quick and nutritious recipes you can prepare in under 10 minutes, perfect for busy lifestyles.",
+    "authorName": "John Smith",
+    "authorImage": "https://randomuser.me/api/portraits/men/2.jpg",
+    "date": "2025-08-09",
+    "time": "7 min read",
+    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 3,
+    "title": "Beginner's Guide to Strength Training",
+    "category": "Fitness",
+    "description": "Learn the basics of strength training and how to create an effective beginner workout plan.",
+    "authorName": "Sarah Lee",
+    "authorImage": "https://randomuser.me/api/portraits/women/3.jpg",
+    "date": "2025-08-08",
+    "time": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1599058917212-d750089bc07f"
+  },
+  {
+    "id": 4,
+    "title": "Meal Planning for a Healthy Week",
+    "category": "Meal Planning",
+    "description": "Plan your weekly meals efficiently with tips for balancing taste, cost, and nutrition.",
+    "authorName": "Michael Brown",
+    "authorImage": "https://randomuser.me/api/portraits/men/4.jpg",
+    "date": "2025-08-07",
+    "time": "8 min read",
+    "coverImage": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+  },
+  {
+    "id": 5,
+    "title": "Understanding Macronutrients",
+    "category": "Nutrition",
+    "description": "A deep dive into proteins, fats, and carbohydrates, and how they impact your health.",
+    "authorName": "Emily Clark",
+    "authorImage": "https://randomuser.me/api/portraits/women/5.jpg",
+    "date": "2025-08-06",
+    "time": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506806732259-39c2d0268443"
+  },
+  {
+    "id": 6,
+    "title": "Hydration and Your Health",
+    "category": "Wellness",
+    "description": "Find out why staying hydrated is essential and how much water you really need daily.",
+    "authorName": "David Johnson",
+    "authorImage": "https://randomuser.me/api/portraits/men/6.jpg",
+    "date": "2025-08-05",
+    "time": "4 min read",
+    "coverImage": "https://images.unsplash.com/photo-1524594154908-edd325bb7db1"
+  },
+  {
+    "id": 7,
+    "title": "Top 5 Superfoods for Energy",
+    "category": "Nutrition",
+    "description": "Boost your energy levels naturally with these nutrient-packed superfoods.",
+    "authorName": "Anna Martinez",
+    "authorImage": "https://randomuser.me/api/portraits/women/7.jpg",
+    "date": "2025-08-04",
+    "time": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506089676908-3592f7389d4d"
+  },
+  {
+    "id": 8,
+    "title": "Mindful Eating Practices",
+    "category": "Wellness",
+    "description": "Learn how to eat with awareness and enjoy your meals while improving digestion.",
+    "authorName": "Chris Wilson",
+    "authorImage": "https://randomuser.me/api/portraits/men/8.jpg",
+    "date": "2025-08-03",
+    "time": "7 min read",
+    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 9,
+    "title": "Healthy Snacks for Work",
+    "category": "Recipes",
+    "description": "Easy-to-prepare snacks that keep you energized and focused throughout the workday.",
+    "authorName": "Sophia Allen",
+    "authorImage": "https://randomuser.me/api/portraits/women/9.jpg",
+    "date": "2025-08-02",
+    "time": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506806732259-39c2d0268443"
+  },
+  {
+    "id": 10,
+    "title": "The Role of Vitamins in Wellness",
+    "category": "Nutrition",
+    "description": "Understand the importance of vitamins in maintaining optimal health and preventing illness.",
+    "authorName": "Mark Taylor",
+    "authorImage": "https://randomuser.me/api/portraits/men/10.jpg",
+    "date": "2025-08-01",
+    "time": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1615472316368-3a4a7d44f5f2"
+  }
+],
+ "testimonies": [
+    {
+      "id": 1,
+      "name": "Lisa Ray",
+      "image": "https://randomuser.me/api/portraits/women/11.jpg",
+      "testimony": "This program transformed my eating habits and helped me achieve my wellness goals!"
+    },
+    {
+      "id": 2,
+      "name": "Michael Carter",
+      "image": "https://randomuser.me/api/portraits/men/12.jpg",
+      "testimony": "The nutrition tips were easy to follow and made a big difference in my energy levels."
+    }
+  ]
+}

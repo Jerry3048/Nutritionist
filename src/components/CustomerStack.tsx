@@ -13,11 +13,11 @@ function CustomerStack() {
             key={index}
             src={src}
             alt="customer"
-            className="w-7 h-7 rounded-full border-2 border-white object-cover"
+            className="w-10 h-10 rounded-full border-2 border-white object-cover"
           />
         ))}
       </div>
-      <span className="sm:ml-2 text-[10px] flex gap-1">
+      <span className="sm:ml-2 xl:text-[20px] sm:text-[18px] text-[16px] flex gap-1 font-urbanistmedium">
         <p className="text-green-900 flex justify-center items-center">50+</p>
         Happy Customers
       </span>

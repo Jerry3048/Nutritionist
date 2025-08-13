@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-import ball from "/asset/Vector.png"
-import logo from "/asset/logo.png"
-import Hanburger from "/asset/Hanburger.png"
+import ball from "/asset/images/Vector.png"
+import logo from "/asset/images/logo.png"
+import Hanburger from "/asset/images/Hanburger.png"
 import { FaArrowRight } from "react-icons/fa";
-import path1 from "/asset/path (1).png"
-import path2 from "/asset/path (2).png"
+import path1 from "/asset/images/path (1).png"
+import path2 from "/asset/images/path (2).png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "Process", path: "/process" },
     { name: "Pricing", path: "/pricing" },
     { name: "Blog", path: "/blog" },
-    { name: <p className="md:bg-[#CBEA7B] md:p-2 md:rounded-lg flex md:justify-center md:items-center md:text-black">Contact Us</p>, path: "/contact" },
+    { name: <p className="sm:bg-[#CBEA7B] sm:p-2 sm:rounded-lg flex sm:justify-center sm:items-center sm:text-black font-urbanistsemibold`">Contact Us</p>, path: "/contact" },
   ];
 
   return (
@@ -29,14 +29,14 @@ const Navbar = () => {
               className=" w-25 ml-[5%] hidden md:block"
              
             />
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center 2xl:text-[18px] sm:text-[16px] text-[14px]">
            <img
               src= {ball}
               alt="ball"
               className="w-4 h-4 mr-1"
              
             />
-            Join Our Personalized Nutrtion Demo For Free
+            <p className="font-urbanistsemibold ">Join Our Personalized Nutrtion Demo For Free</p>
             <FaArrowRight className="ml-3" />
         </div>
             <img
@@ -62,14 +62,14 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden sm:flex space-x-4 md:justify-center md:items-center text-white text-[13px] ">
+          <div className="hidden sm:flex space-x-4 sm:justify-center sm:items-center text-white 2xl:text-[18px] sm:text-[14px] ">
             {navItems.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
                   `hover:text-green-500 ${
-                    isActive ? "text-[#CBEA7B] font-semibold" : ""
+                    isActive ? "text-[#CBEA7B] font-urbanistsemibold" : ""
                   }`
                 }
               >
@@ -97,14 +97,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-       <div className={`fixed top-30 right-0 flex flex-col items-start w-[60%] md:hidden backdrop-blur-md bg-[#1A3129]/50  p-8  space-y-[10%] transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+       <div className={`fixed top-30 right-0 flex flex-col items-start w-[60%] 2xl:text-[18px] md:text-[14px] md:hidden backdrop-blur-md bg-[#1A3129]/50  p-8  space-y-[10%] transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
           {navItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
                 `block hover:text-green-950 ${
-                  isActive ? "text-[#CBEA7B] font-semibold" : ""
+                  isActive ? "text-[#CBEA7B] font-urbanistsemibold" : ""
                 }`
               }
               onClick={() => setIsOpen(false)} // close menu after click

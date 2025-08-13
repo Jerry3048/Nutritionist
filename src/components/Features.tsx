@@ -31,17 +31,17 @@ export default function NutritionIcons() {
 
   return (
 
-      <div className="space-y-2 mt-10 w-[90%] mx-auto">
-        <p className="flex justify-center items-center font-semibold">Features</p>
-        <p className="text-[10px] flex justify-center items-center mb-8 text-center">Welcome to the Feature Section of Nutritionist, your ultimate destination for all things nutrition and wellness.</p>
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7">
+      <div className="space-y-2 mt-30 w-[90%] mx-auto">
+        <h1 className="flex justify-center items-center font-urbanistbold 2xl:text-[48px] sm:text-[38px] text-[28px] ">Features</h1>
+        <p className="text-[18px] sm:text-[16px]  2xl:text-[14px] flex justify-center items-center mb-8 text-center font-urbanistmedium">Welcome to the Feature Section of Nutritionist, your ultimate destination for all things nutrition and wellness.</p>
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-3">
           {items.map((item, idx) => (
-            <div key={idx} className="flex flex-col text-gray-800 space-y-2">
+            <div key={idx} className="flex flex-col text-gray-800 space-y-2 bg-green-50 p-4 rounded-md">
              <div className="flex items-center space-x-1">
-                  <div className=" bg-[#CBEA7B] p-2 text-[13px] rounded-md">{item.icon}</div>
-                  <span className="text-[10px] font-semibold">{item.label}</span>
+                  <div className=" bg-[#CBEA7B] p-2 text-[18px] rounded-md">{item.icon}</div>
+                  <span className=" font-urbanistsemibold text-[18px] sm:text-[20px] 2xl:text-[24px] ">{item.label}</span>
              </div>
-             <p className="text-[9px]">{item.description}</p>
+             <p className="font-urbanistmedium text-[14px] sm:text-[16px] 2xl:text-[18px] ">{item.description}</p>
             </div>
           ))}
         </div>
