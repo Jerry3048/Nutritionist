@@ -4,6 +4,7 @@ import face from "/asset/images/face.png";
 import CustomerStack from "../components/CustomerStack";
 import Features from "../components/Features";
 import Blog from "../components/BlogandTestimony";
+import PricingPage from "../components/PricingPage" 
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
       <div className=" mt-[120px] sm:mt-[100px]">
         <div className="sm:flex ">
           <div className="relative">
-            <img src={face} alt="ball" className=" h-full w-full relative" />
+            <img src={face} alt="ball" className=" h-full w-full relative rounded-b-4xl sm:rounded-b-none" />
             <div className=" sm:hidden flex justify-center items-center absolute  left-0 right-0 bottom-[-15%]">
               <CustomerStack />
             </div>
@@ -50,6 +51,7 @@ function Home() {
       </div>
       <Features />
       <Blog />
+      <PricingPage showFeatures={false} showSize={true} />
       <Footer />
     </div>
   );

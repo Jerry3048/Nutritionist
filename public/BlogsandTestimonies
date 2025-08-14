@@ -111,18 +111,66 @@
     "coverImage": "https://images.unsplash.com/photo-1615472316368-3a4a7d44f5f2"
   }
 ],
- "testimonies": [
-    {
-      "id": 1,
-      "name": "Lisa Ray",
-      "image": "https://randomuser.me/api/portraits/women/11.jpg",
-      "testimony": "This program transformed my eating habits and helped me achieve my wellness goals!"
-    },
-    {
-      "id": 2,
-      "name": "Michael Carter",
-      "image": "https://randomuser.me/api/portraits/men/12.jpg",
-      "testimony": "The nutrition tips were easy to follow and made a big difference in my energy levels."
-    }
-  ]
+"testimonies": [
+  {
+    "id": 1,
+    "name": "Lisa Ray",
+    "image": "https://randomuser.me/api/portraits/women/11.jpg",
+    "testimony": "This program transformed my eating habits and helped me achieve my wellness goals!"
+  },
+  {
+    "id": 2,
+    "name": "Michael Carter",
+    "image": "https://randomuser.me/api/portraits/men/12.jpg",
+    "testimony": "The nutrition tips were easy to follow and made a big difference in my energy levels."
+  },
+  {
+    "id": 3,
+    "name": "Sophia Bennett",
+    "image": "https://randomuser.me/api/portraits/women/13.jpg",
+    "testimony": "I’ve never felt healthier. The recipes are delicious and so easy to make!"
+  },
+  {
+    "id": 4,
+    "name": "James Walker",
+    "image": "https://randomuser.me/api/portraits/men/14.jpg",
+    "testimony": "The workouts are fun, effective, and perfect for my busy schedule."
+  },
+  {
+    "id": 5,
+    "name": "Ava Thompson",
+    "image": "https://randomuser.me/api/portraits/women/15.jpg",
+    "testimony": "Mindful eating has changed the way I think about food. Thank you!"
+  },
+  {
+    "id": 6,
+    "name": "Daniel Martinez",
+    "image": "https://randomuser.me/api/portraits/men/16.jpg",
+    "testimony": "I lost weight without feeling deprived. It’s all about balance."
+  },
+  {
+    "id": 7,
+    "name": "Chloe Anderson",
+    "image": "https://randomuser.me/api/portraits/women/17.jpg",
+    "testimony": "The guidance I received has helped me stay consistent and motivated."
+  },
+  {
+    "id": 8,
+    "name": "Ethan Rodriguez",
+    "image": "https://randomuser.me/api/portraits/men/18.jpg",
+    "testimony": "Hydration and nutrition advice really boosted my performance."
+  },
+  {
+    "id": 9,
+    "name": "Mia Johnson",
+    "image": "https://randomuser.me/api/portraits/women/19.jpg",
+    "testimony": "It’s not just a program—it’s a lifestyle. I feel amazing!"
+  },
+  {
+    "id": 10,
+    "name": "Oliver Davis",
+    "image": "https://randomuser.me/api/portraits/men/20.jpg",
+    "testimony": "From workouts to meal plans, everything has been top-notch."
+  }
+]
 }

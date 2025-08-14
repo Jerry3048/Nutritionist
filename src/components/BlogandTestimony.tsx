@@ -1,96 +1,155 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BlogCard from "./BlogCard";
-import type { Item } from "../types";
-import type { Testimony } from "../types";
+import type { Item, Testimony } from "../types";
 import TestimonyCard from "./TestimonyCard";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-interface response {
+interface Response {
   blogs: Item[];
   testimonies: Testimony[];
-
 }
 
 function Blog() {
   const [blogs, setBlogs] = useState<Item[]>([]);
-  const [testimonies, setTestimonies] = useState<Testimony[]>([]);
+  const [testimonyBatches, setTestimonyBatches] = useState<Testimony[][]>([]);
+  const [testimonyBatchesMobile, setTestimonyBatchesMobile] = useState<
+    Testimony[][]
+  >([]);
+  const [activeBatch, setActiveBatch] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Utility to split array into chunks
+  const chunkArray = (arr: Testimony[], size: number) => {
+    const chunks = [];
+    for (let i = 0; i < arr.length; i += size) {
+      chunks.push(arr.slice(i, i + size));
+    }
+    return chunks;
+  };
+
+  const handlePrev = () => {
+    setActiveBatch((prev) =>
+      prev === 0 ? testimonyBatches.length - 1 : prev - 1
+    );
+  };
+
+  const handleNext = () => {
+    setActiveBatch((prev) =>
+      prev === testimonyBatches.length - 1 ? 0 : prev + 1
+    );
+  };
+
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchData = async () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await axios.get<response>("/BlogsandTestimonies");
 
-        // Shuffle and pick 4 random blogs
-        const shuffledblogs = [...response.data.blogs].sort(
+        const response = await axios.get<Response>("/BlogsandTestimonies");
+
+        // Random 4 blogs
+        const shuffledBlogs = [...response.data.blogs].sort(
           () => 0.5 - Math.random()
         );
-         const selectedblogs = shuffledblogs.slice(0, 4);
-        console.log("Selectedblogs:", selectedblogs);
-         setBlogs(selectedblogs);
+        setBlogs(shuffledBlogs.slice(0, 4));
 
-
-        // Shuffle and pick 4 random testimonies
-         const shuffledtestimonies = [...response.data.testimonies].sort(
+        // Random testimonies then chunk into batches of 3
+        const shuffledTestimonies = [...response.data.testimonies].sort(
           () => 0.5 - Math.random()
         );
-        const selectedtestimonies = shuffledtestimonies.slice(0, 4);
-        console.log("Selectedtestimonies:", selectedtestimonies);
-        setTestimonies(selectedtestimonies);
+        const batches = chunkArray(shuffledTestimonies, 3);
+        setTestimonyBatches(batches);
 
-       
+        const mobilebatches = chunkArray(shuffledTestimonies, 1);
+        setTestimonyBatchesMobile(mobilebatches);
+        setActiveBatch(0);
       } catch (err) {
-        setError("Failed to fetch blogs");
-        console.error("Error fetching blogs:", err);
+        setError("Failed to fetch blogs and testimonies");
+        console.error("Error fetching:", err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchProducts();
+    fetchData();
   }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="mt-30 w-[90%] mx-auto space-y-30">
-        <section>
-              <h1 className="flex justify-center items-center font-urbanistbold text-[28px] sm:text-[38px] 2xl:text-[48px] ">
-                Our Blogs
-              </h1>
-              <p className="text-center text-[14px] sm:text-[16px] 2xl:text-[18px]  sm:max-w-[70%] mx-auto font-urbanistmedium">
-                Our blog is a treasure trove of informative and engaging articles
-                written by our team of nutritionists, dietitians, and wellness experts.
-                Here's what you can expect from our blog.
-              </p>
-              <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:gris-cols-3 gap-4 justify-center items-center mx-auto">
-                {blogs.map((item, idx) => (
-                  <div key={idx} className="flex mx-auto w-full">
-                    <BlogCard {...item} />
-                  </div>
-                ))}
-              </div>
-        </section>
-        <section>
-            <h1 className="flex justify-center items-center font-urbanistbold text-[28px] sm:text-[38px] 2xl:text-[48px] ">
-              Our Testimonials
-            </h1>
-            <p className="text-center text-[14px] sm:text-[16px] 2xl:text-[18px]  sm:max-w-[70%] mx-auto font-urbanistmedium">
-            Our satisfied clients share their success stories and experiences on their journey to better health and well-being.
-            </p>
-      
-            <div className="p-6 grid grid-cols-1 sm:grid-cols-3 md:gris-cols-3 gap-4 justify-center items-center mx-auto">
-              {testimonies.map((item, idx) => (
-                <div key={idx} className="flex mx-auto w-full">
-                  <TestimonyCard {...item} />
-                </div>
-              ))}
+    <div className="mt-20 w-[90%] mx-auto space-y-20">
+      {/* BLOGS SECTION */}
+      <section>
+        <h1 className="flex justify-center font-urbanistbold text-[28px] sm:text-[38px]">
+          Our Blogs
+        </h1>
+        <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:gris-cols-3 gap-4">
+          {blogs.map((item, idx) => (
+            <div key={idx} className="flex mx-auto w-full">
+              <BlogCard {...item} />
             </div>
-        </section>
+          ))}
+        </div>
+      </section>
+
+      {/* TESTIMONIES SECTION */}
+      <section>
+        <h1 className="flex justify-center font-urbanistbold text-[28px] sm:text-[38px]">
+          Our Testimonials
+        </h1>
+
+        {/* Testimonies grid */}
+        <div className="p-6 sm:grid sm:grid-cols-3 gap-4 hidden">
+          {testimonyBatches[activeBatch]?.map((item, idx) => (
+            <div key={idx} className="flex mx-auto w-full">
+              <TestimonyCard {...item} />
+            </div>
+          ))}
+        </div>
+
+        <div className="p-6 grid grid-cols-1 sm:hidden">
+          {testimonyBatchesMobile[activeBatch]?.map((item, idx) => (
+            <div key={idx} className="flex mx-auto w-full">
+              <TestimonyCard {...item} />
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation buttons */}
+        <div className="flex justify-center space-x-4 items-center text-gray-500">
+          <button
+            onClick={handlePrev}
+            className=" hover:bg-gray-300 transition"
+          >
+            <FiChevronLeft size={24} />
+          </button>
+
+          {/* Dot Navigation */}
+          <div className="flex justify-center space-x-2">
+            {testimonyBatches.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveBatch(index)}
+                className={`w-1 h-1 rounded-full transition-all duration-300 ${
+                  activeBatch === index
+                    ? "bg-[#356554] scale-125"
+                    : "bg-[#c2e48f]"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={handleNext}
+            className="  hover:bg-gray-300 transition"
+          >
+            <FiChevronRight size={24} />
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
