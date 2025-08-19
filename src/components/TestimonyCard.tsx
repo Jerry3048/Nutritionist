@@ -2,7 +2,7 @@ import type { Testimony } from "../types";
 
 const TestimonyCard: React.FC<Testimony> = ({ id, name, image, testimony }) => {
   return (
-    <div key={id} className="bg-green-100">
+    <div key={id} className="bg-[#F6FBE9]">
       <h1 className="text-[50px] text-[#356554]">''</h1>
       <p className="text-[14px] sm:text-[16px] 2xl:text-[18px] font-urbanistmedium">
         {testimony}

@@ -13,7 +13,7 @@ const BlogCard: React.FC<Item> = ({
   description,
 }) => {
   return (
-    <div className="bg-green-100  overflow-hidden rounded-lg">
+    <div className="bg-[#F6FBE9]  overflow-hidden rounded-lg">
       <img
         src={coverImage}
         alt={title}

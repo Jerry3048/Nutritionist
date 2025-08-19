@@ -1,16 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Home from "./pages/Home";
-// import Products from "./pages/Products";
-// import ProductDetail from "./pages/ProductDetail";
+import About from "./pages/About";
+import Team from "./pages/Team";
+import Process from "./pages/Process";
+
+
 // import Cart from "./pages/Cart";
 // import Checkout from "./pages/Checkout";
 // import NotFound from "./pages/NotFound";
 
-const App: React.FC = () => {
+function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Team" element={<Team />} />
+          <Route path="/Process" element={<Process />} />
 
         {/* <Route path="/products" element={<Products />} />
 
