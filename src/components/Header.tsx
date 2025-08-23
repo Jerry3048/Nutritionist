@@ -13,17 +13,17 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/About" },
-    { name: "Team", path: "/team" },
-    { name: "Process", path: "/process" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "Blog", path: "/blog" },
+    { name: "Team", path: "/Team" },
+    { name: "Process", path: "/Process" },
+    { name: "Pricing", path: "/PricePage" },
+    { name: "Blog", path: "/BlogPage" },
     {
       name: (
         <p className="sm:bg-[#CBEA7B] sm:p-2 sm:rounded-lg flex sm:justify-center sm:items-center sm:text-black font-urbanistsemibold">
           Contact Us
         </p>
       ),
-      path: "/contact",
+      path: "/Contact",
     },
   ];
 

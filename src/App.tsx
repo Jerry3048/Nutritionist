@@ -3,11 +3,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
 import Process from "./pages/Process";
+import PricePage from "./pages/PricePage";
+import BlogPage from "./pages/BlogPage";
+import Contact from "./pages/Contact";
 
-
-// import Cart from "./pages/Cart";
-// import Checkout from "./pages/Checkout";
-// import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -17,16 +16,9 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Team" element={<Team />} />
           <Route path="/Process" element={<Process />} />
-
-        {/* <Route path="/products" element={<Products />} />
-
-        <Route path="/products/:id" element={<ProductDetail />} />
-
-        <Route path="/cart" element={<Cart />} />
-
-        <Route path="/checkout" element={<Checkout />} />
-
-        <Route path="*" element={<NotFound />} /> */}
+          <Route path="/PricePage" element={<PricePage />} />
+          <Route path="/BlogPage" element={<BlogPage />} />
+          <Route path="/Contact" element={<Contact/>} />
       </Routes>
     </Router>
   );

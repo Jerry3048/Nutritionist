@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import BlogCard from "./BlogCard";
+import BlogCard from "../components/BlogCard";
 import type { Item, Testimony } from "../types";
-import TestimonyCard from "./TestimonyCard";
+import TestimonyCard from "../components/TestimonyCard";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 interface Response {
@@ -80,13 +80,13 @@ function Blog() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="mt-20 w-[90%] mx-auto space-y-20">
+    <div className="mt-20  mx-auto space-y-20">
       {/* BLOGS SECTION */}
       <section>
         <h1 className="flex justify-center font-urbanistbold text-[28px] sm:text-[38px]">
           Our Blogs
         </h1>
-        <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:gris-cols-3 gap-4">
+        <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:gris-cols-3 gap-4">
           {blogs.map((item, idx) => (
             <div key={idx} className="flex mx-auto w-full">
               <BlogCard {...item} />

@@ -109,6 +109,115 @@
     "date": "2025-08-01",
     "time": "6 min read",
     "coverImage": "https://images.unsplash.com/photo-1615472316368-3a4a7d44f5f2"
+  },
+    {
+    "id": 11,
+    "title": "10 Effective Strategies for Sustainable Weight Loss",
+    "category": "Weight Loss Tips",
+    "description": "Discover proven strategies for long-term weight loss success. Learn how to create healthy habits, set achievable goals, and make sustainable lifestyle changes.",
+    "authorName": "Jane Doe",
+    "authorImage": "https://randomuser.me/api/portraits/women/1.jpg",
+    "date": "2025-08-11",
+    "time": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506806732259-39c2d0268443"
+  },
+  {
+    "id":12,
+    "title": "The Role of Portion Control in Weight Management",
+    "category": "Weight Loss Tips",
+    "description": "Learn how portion control can help you manage your weight effectively. Find practical tips for controlling portion sizes and avoiding overeating.",
+    "authorName": "John Smith",
+    "authorImage": "https://randomuser.me/api/portraits/men/2.jpg",
+    "date": "2025-08-09",
+    "time": "7 min read",
+    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 13,
+    "title": "Understanding Emotional Eating and How to Overcome It",
+    "category": "Weight Loss Tips",
+    "description": "Explore the connection between emotions and eating habits. Get valuable insights on how to identify emotional triggers and develop healthier coping mechanisms.",
+    "authorName": "Sarah Lee",
+    "authorImage": "https://randomuser.me/api/portraits/women/3.jpg",
+    "date": "2025-08-08",
+    "time": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1599058917212-d750089bc07f"
+  },
+  {
+    "id": 14,
+    "title": "How to Stay Motivated on Your Weight Loss Journey",
+    "category": "Weight Loss Tips",
+    "description": "Find effective strategies to stay motivated and overcome obstacles during your weight loss journey. Get tips on setting realistic goals, tracking progress, and celebrating achievements.",
+    "authorName": "Michael Brown",
+    "authorImage": "https://randomuser.me/api/portraits/men/4.jpg",
+    "date": "2025-08-07",
+    "time": "8 min read",
+    "coverImage": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0"
+  },
+  {
+    "id": 15,
+    "title": "The Benefits of a Plant-Based Diet for Overall Health",
+    "category": "Healthy Eating",
+    "description": "Explore the advantages of adopting a plant-based diet. Learn about the potential health benefits, nutrient-rich plant-based foods, and tips for transitioning to a plant-based lifestyle.",
+    "authorName": "Emily Clark",
+    "authorImage": "https://randomuser.me/api/portraits/women/5.jpg",
+    "date": "2025-08-06",
+    "time": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506806732259-39c2d0268443"
+  },
+  {
+    "id": 16,
+    "title": "Understanding Macronutrients: Carbohydrates, Proteins, and Fats",
+    "category": "Healthy Eating",
+    "description": "Get a comprehensive overview of macronutrients and their role in a balanced diet. Discover the best sources of each macronutrient and how to incorporate them into your meals.",
+    "authorImage": "https://randomuser.me/api/portraits/men/6.jpg",
+    "date": "2025-08-05",
+    "time": "4 min read",
+    "coverImage": "https://images.unsplash.com/photo-1524594154908-edd325bb7db1"
+  },
+  {
+    "id": 17,
+    "title": "Cardio vs. Strength Training: Which Is Better for Weight Loss?",
+    "category": "Fitness and Exercise",
+    "description": "Explore the benefits of both cardio and strength training exercises for weight loss. Find out how to combine them effectively to maximize your results.",
+    "authorName": "Anna Martinez",
+    "authorImage": "https://randomuser.me/api/portraits/women/7.jpg",
+    "date": "2025-08-04",
+    "time": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506089676908-3592f7389d4d"
+  },
+  {
+    "id": 18,
+    "title": "Building a Home Workout Routine: Tips and Best Practices",
+    "category": "Fitness and Exercise",
+    "description": "Discover how to create an effective workout routine at home. Learn about equipment options, exercise techniques, and ways to stay motivated.",
+    "authorName": "Chris Wilson",
+    "authorImage": "https://randomuser.me/api/portraits/men/8.jpg",
+    "date": "2025-08-03",
+    "time": "7 min read",
+    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 19,
+    "title": "Developing a Positive Body Image and Self-Confidence",
+    "category": "Mindset and Motivation",
+    "description": "Explore techniques for cultivating a positive body image and improving self-confidence. Learn how to embrace your body and appreciate your unique qualities.",
+    "authorName": "Sophia Allen",
+    "authorImage": "https://randomuser.me/api/portraits/women/9.jpg",
+    "date": "2025-08-02",
+    "time": "5 min read",
+    "coverImage": "https://images.unsplash.com/photo-1506806732259-39c2d0268443"
+  },
+  {
+    "id": 20,
+    "title": "Overcoming Self-Sabotage in Your Weight Loss Journey",
+    "category": "Mindset and Motivation",
+    "description": "Identify self-sabotaging behaviors and learn strategies to overcome them. Discover how to shift your mindset and develop healthier habits.",
+    "authorName": "Mark Taylor",
+    "authorImage": "https://randomuser.me/api/portraits/men/10.jpg",
+    "date": "2025-08-01",
+    "time": "6 min read",
+    "coverImage": "https://images.unsplash.com/photo-1615472316368-3a4a7d44f5f2"
   }
 ],
 "testimonies": [

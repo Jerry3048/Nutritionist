@@ -10,7 +10,7 @@ function Footer() {
     { name: "About", path: "/about" },
     { name: "Team", path: "/team" },
     { name: "Process", path: "/process" },
-    { name: "Pricing", path: "/pricing" },
+    { name: "Pricing", path: "/pricePage" },
     { name: "Blog", path: "/blog" },
     { name:"Contact", path: "/contact" },
   ];
@@ -20,7 +20,7 @@ function Footer() {
     <div className="bg-[#1A3129] shadow-md  text-white min-h-[100px] pb-3">
 
 
-     <div className="w-[90%] mx-auto">
+     <div className="">
         <div className="max-w-[90%] mx-auto ">
           <div className="flex items-center justify-between h-16">
            
@@ -48,7 +48,12 @@ function Footer() {
             </div>
   
             <div className="flex items-center space-x-2 2xl:text-[18px] md:text-[14px] font-urbanistmedium">
-               <p >Go To Top</p> <Link className="bg-[#25453a] shadow-black w-7 h-7 rounded-full flex justify-center items-center 2xl:text-[18px] md:text-[14px]"  to="/home"><FaArrowUp/></Link>
+              <p >Go To Top</p>  <a
+                href="#home"
+                className="bg-[#25453a] shadow-black w-7 h-7 rounded-full flex justify-center items-center 2xl:text-[18px] md:text-[14px]"
+              >
+                <FaArrowUp />
+              </a>
             </div>
           </div>
   
@@ -64,14 +69,25 @@ function Footer() {
             </div>
         </div>
 
-        <div className="bg-[#25453a] shadow-black md:flex justify-between items-center  w-[90%] mx-auto p-2 pb-0 rounded-lg text-[12px] 2xl:text-[18px] md:text-[14px] font-urbanistmedium space-y-3 mt-5">
-           <div className="md:flex space-x-4 justify-between items-center space-y-3 md:space-y-0  lg:w-[60%]">
-              <p className="flex space-x-1 justify-center items-center  h-[40px] rounded-lg p-2 border-1  border-[#4f5b31] w-full "><span className="text-[#CBEA7B] mr-1"><FaPhoneAlt/></span>+9191813232309</p>
-              <p className="flex space-x-1 justify-center items-center h-[40px] rounded-lg p-2 border-1 border-[#4f5b31] w-full"><span className="text-[#CBEA7B] mr-1"><FaEnvelope/></span>hello@squareup.com</p>
-              <p className="flex space-x-1 justify-center items-center h-[40px]  rounded-lg p-2 border-1 border-[#4f5b31] w-full"><span className="text-[#CBEA7B] mr-1"><FaMapMarkerAlt/></span>somewhere in the world</p>
-           </div>
-           <p className="flex justify-center items-center ml-4">© 2023 Nutritionist. All rights reserved.</p>
+      <div className="bg-[#25453a] shadow-black flex flex-col md:flex-row justify-between items-center w-[90%] mx-auto p-4 rounded-lg text-[12px] md:text-[14px] 2xl:text-[18px] font-urbanistmedium mt-5 space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row md:space-x-6 w-full md:w-[60%]">
+          <p className="flex items-center justify-center rounded-lg p-2 border border-[#4f5b31] flex-1 mb-3 md:mb-0">
+            <FaPhoneAlt className="text-[#CBEA7B] mr-2" />
+            +9191813232309
+          </p>
+          <p className="flex items-center justify-center rounded-lg p-2 border border-[#4f5b31] flex-1 mb-3 md:mb-0">
+            <FaEnvelope className="text-[#CBEA7B] mr-2" />
+            hello@squareup.com
+          </p>
+          <p className="flex items-center justify-center rounded-lg p-2 border border-[#4f5b31] flex-1">
+            <FaMapMarkerAlt className="text-[#CBEA7B] mr-2" />
+            somewhere in the world
+          </p>
         </div>
+        <p className="text-center md:text-right w-full md:w-auto">
+          © 2023 Nutritionist. All rights reserved.
+        </p>
+      </div>
 
         
      </div>

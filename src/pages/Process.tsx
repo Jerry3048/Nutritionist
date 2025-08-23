@@ -1,11 +1,12 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import logo from "/asset/images/Icon Container.png";
+import Procedures from "../components/Procedures";
 
 function Process() {
   return (
     <div>
-        <Header/>
+         <div id="home"> <Header /></div>
          <div className="relative w-[90%] bg-[#F6FBE9] flex items-center justify-center mx-auto rounded-t-lg mt-40 border-1 border-[#F6FBE9]">
 
             <div
@@ -39,13 +40,16 @@ function Process() {
                 <p className="mt-2">At Nutritionist, we believe in providing a personalized and comprehensive approach to help you achieve your health and wellness goals. Our "How it Works" process is designed to guide you through each step of your journey, ensuring that you receive the support, knowledge, and tools you need to succeed. Here's a detailed breakdown of our process:</p> 
             </div>                   
         </div>
-           <h1 className="flex justify-center text-3xl font-urbanistbold text-green-900">
-            How it Works
-          </h1>
-          <p className="text-center text-[14px] sm:text-[16px] 2xl:text-[18px] font-urbanistmedium w-[70%] mx-auto">
-           We provide a step-by-step guide on how to get started on your journey towards better health and nutrition. We are here to simplify the process and make it easy for you to navigate our platform and access the resources you need to achieve your goals. Here's how it works
-          </p>
-
+        <Procedures/>
+        <div className="md:flex justify-center space-x-4 items-center  bg-[#F6FBE9] w-[90%] md:h-[150px] mx-auto m-5 text-center md:text-left p-7 rounded-lg mt-10">
+            <div className="space-y-3">
+                <h1 className="flex  font-urbanistsemibold text-[18px] sm:text-[20px] 2xl:text-[24px] justify-center items-center ">Are you ready to embark on a transformative journey towards better health and wellness?</h1>
+                <p className="md:max-w-[90%] text-[15px] 2xl:text-[20px] font-urbanistmedium">Join us at Nutritionist and let us guide you on the path to a healthier and happier you.</p>
+            </div>
+            <div className="p-5 md:p-0 md:w-[20%]">
+            <button className="bg-[#CBEA7B] p-2 text-[15px] rounded-md w-full font-urbanistmedium">Join Us Now</button>
+            </div>
+        </div>
         <Footer/>
     </div>
   )

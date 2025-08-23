@@ -1,41 +1,51 @@
-import React from "react";
 import { FaHeart, FaEye } from "react-icons/fa";
 import type { Item } from "../types";
 
-const BlogCard: React.FC<Item> = ({
-  title,
-  category,
-  authorName,
-  authorImage,
-  date,
-  time,
-  coverImage,
-  description,
-}) => {
+function BlogCard({title,category,authorName,authorImage,date,time,coverImage,description,showTitle = false,showWriter=true}: Item) {
   return (
-    <div className="bg-[#F6FBE9]  overflow-hidden rounded-lg">
-      <img
-        src={coverImage}
-        alt={title}
-        className=" w-310 h-[40vh] object-cover rounded-lg"
-      />
+    <div className= {`bg-[#F6FBE9]  overflow-hidden
+    ${showTitle ? "border-1  border-[#eafbc9]" : ""}`}>
+       <div className={`${showTitle ? "border-b-2  border-[#eafbc9]" : ""}`}>
+          <div className="p-4 pb-0">
+              {showTitle &&(<span className="text-[14px] sm:text-[16px] 2xl:text-[18px] font-urbanistmedium underline underline-offset-10 decoration-[#CBEA7B] decoration-2">
+                {category}
+              </span>)}
+            <img
+              src={coverImage}
+              alt={title}
+              className={`object-cover h-[200px] 
+                ${showTitle ? "rounded-t-lg flex justify-end items-end mx-16 md:mx-18 xl:mx-25 w-[80%] mt-6" : "rounded-lg w-full"}`}
+            />
+          </div>
+       </div>
 
       <div className="p-4">
-        <span className="text-[14px] sm:text-[16px] 2xl:text-[18px] font-urbanistmedium ">
-          {category}
-        </span>
+        <div className="sm:flex justify-between item-center">
+          <div>
+            {showWriter &&(<span className="text-[14px] sm:text-[16px] 2xl:text-[18px] font-urbanistsemibold ">
+              {category}
+            </span>)}
+    
+            {/* Title */}
+            <h2 className="font-urbanistsemibold mt-1 text-[20px] sm:text-[22px] 2xl:text-[26px]">
+              {title}
+            </h2>
+    
+            <p className="text-[14px] sm:text-[16px] 2xl:text-[18px] mt-1 font-urbanistmedium">
+              {description}
+            </p>
+          </div>
 
-        {/* Title */}
-        <h2 className="font-urbanistsemibold mt-1 text-[20px] sm:text-[22px] 2xl:text-[26px]">
-          {title}
-        </h2>
-
-        <p className="text-[14px] sm:text-[16px] 2xl:text-[18px] mt-1 font-urbanistmedium">
-          {description}
-        </p>
+          {showTitle && (<div className="flex justify-center items-center">
+              <p className="bg-[#CBEA7B] p-2 rounded-lg flex justify-center items-center text-black font-urbanistsemibold h-fit w-full sm:w-[100px]">
+              Read More
+            </p>
+          </div>
+        )}
+        </div>
 
         {/* Author Info */}
-        <div className="text-[8px]  mt-2 flex justify-between items-center">
+       {showWriter && ( <div className="text-[8px]  mt-2 flex justify-between items-center bg-[#fefffa] p-2">
           <div className="flex items-center mt-3 space-x-2">
             <img
               src={authorImage}
@@ -66,6 +76,7 @@ const BlogCard: React.FC<Item> = ({
             </span>
           </div>
         </div>
+      )}
       </div>
     </div>
   );

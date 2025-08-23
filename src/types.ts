@@ -7,6 +7,8 @@ export interface Item {
   time: string;
   coverImage: string;
   description: string;
+  showTitle?:boolean
+  showWriter?:boolean
 }
 
 export interface Testimony {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function PricingPage({ showFeatures = true, showSize = true }) {
+function PricingPage({ showFeatures = true, showSize = true, showHeading = true, showPremium = true}) {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
     "monthly"
   );
@@ -11,24 +11,26 @@ function PricingPage({ showFeatures = true, showSize = true }) {
         name: "Basic",
         price: "$19",
         size: "Get started on your health journey with our Basic Plan. It includes personalized nutrition coaching, access to our app, meal planning assistance, and email support.",
-        features: ["Feature 1", "Feature 2", "Feature 3"],
+        features: ["Personalized nutrition plan tailored to your goals and dietary preferences."
+          , "Access to our mobile app for convenient meal tracking and progress monitoring.", "Email support to address your questions and concerns.","Regular check-ins with a dedicated nutritionist to review your progress and provide guidance."
+        ],
       },
       {
         name: "Premium",
         price: "$49",
         size: "Upgrade to our Premium Plan for enhanced features. In addition to the Basic Plan, you'll receive video consultations, priority support, and personalized recipe recommendations.",
-        features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
+        features: ["All the features included in the Basic Plan.", "One-on-one video consultations with your dedicated nutritionist for more personalized guidance and support.", "Recipe recommendations and meal planning assistance.", "Priority email support for quicker responses to your inquiries.", "Educational resources and guides to deepen your understanding of nutrition and healthy habits."],
       },
       {
         name: "Ultimate",
         price: "$99",
         size: "Experience the full benefits of personalized nutrition coaching with our Ultimate Plan. Enjoy all the features of the Premium Plan, along with 24/7 chat support and exclusive workshops.",
         features: [
-          "Feature 1",
-          "Feature 2",
-          "Feature 3",
-          "Feature 4",
-          "Feature 5",
+          "All the features included in the Plus Plan.",
+          "Unlimited access to video consultations with your dedicated nutritionist for ongoing support and accountability.",
+          "Advanced progress tracking tools to monitor your weight, body measurements, and fitness goals.",
+          "Customized meal plans and recipe suggestions based on your preferences and nutritional needs.",
+          "Priority email and phone support for immediate assistance.",
         ],
       },
     ],
@@ -37,24 +39,26 @@ function PricingPage({ showFeatures = true, showSize = true }) {
         name: "Basic",
         price: "$199",
         size: "Get started on your health journey with our Basic Plan. It includes personalized nutrition coaching, access to our app, meal planning assistance, and email support.",
-        features: ["Feature 1", "Feature 2", "Feature 3"],
+        features: ["Personalized nutrition plan tailored to your goals and dietary preferences."
+          , "Access to our mobile app for convenient meal tracking and progress monitoring.", "Email support to address your questions and concerns.","Regular check-ins with a dedicated nutritionist to review your progress and provide guidance."
+        ],
       },
       {
         name: "Premium",
         price: "$499",
         size: "Upgrade to our Premium Plan for enhanced features. In addition to the Basic Plan, you'll receive video consultations, priority support, and personalized recipe recommendations.",
-        features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
+        features: ["All the features included in the Basic Plan.", "One-on-one video consultations with your dedicated nutritionist for more personalized guidance and support.", "Recipe recommendations and meal planning assistance.", "Priority email support for quicker responses to your inquiries.", "Educational resources and guides to deepen your understanding of nutrition and healthy habits."],
       },
       {
         name: "Ultimate",
         price: "$999",
         size: "Experience the full benefits of personalized nutrition coaching with our Ultimate Plan. Enjoy all the features of the Premium Plan, along with 24/7 chat support and exclusive workshops.",
         features: [
-          "Feature 1",
-          "Feature 2",
-          "Feature 3",
-          "Feature 4",
-          "Feature 5",
+          "All the features included in the Plus Plan.",
+          "Unlimited access to video consultations with your dedicated nutritionist for ongoing support and accountability.",
+          "Advanced progress tracking tools to monitor your weight, body measurements, and fitness goals.",
+          "Customized meal plans and recipe suggestions based on your preferences and nutritional needs.",
+          "Priority email and phone support for immediate assistance.",
         ],
       },
     ],
@@ -62,14 +66,18 @@ function PricingPage({ showFeatures = true, showSize = true }) {
 
   return (
     <div className="w-[90%] mx-auto py-12">
-      <h1 className="text-4xl font-urbanistbold text-center mb-6">
-        Our Pricing
-      </h1>
-      <p className="flex justify-center items-center font-urbanistmedium mb-10 text-gray-500 text-[14px] sm:text[16px] 2xl:text-[18px] text-center">
-        We outline our flexible and affordable options to support you on your
-        journey to optimal health and nutrition. We believe that everyone
-        deserves access to personalized nutrition guidance and resources
-      </p>
+
+      {showHeading &&(
+      <div>
+              <h1 className="text-4xl font-urbanistbold text-center mb-6">
+            Our Pricing
+          </h1>
+          <p className="flex justify-center items-center font-urbanistmedium mb-10 text-gray-500 text-[14px] sm:text[16px] 2xl:text-[18px] text-center">
+            We outline our flexible and affordable options to support you on your journey to optimal health and nutrition. We believe that everyone deserves access to personalized nutrition guidance and resources
+          </p>
+      </div>
+      )}
+      
 
       {/* Tabs */}
       <div className="flex justify-center mb-2 space-x-4 border-1 border-[#cbf092] p-2 w-[200px] h-cover mx-auto">
@@ -103,36 +111,45 @@ function PricingPage({ showFeatures = true, showSize = true }) {
         {plans[billingCycle].map((plan, index) => (
           <div
             key={index}
-            className="rounded-2xl bg-[#F6FBE9] p-6 flex flex-col justify-between"
+            className="rounded-2xl h-fit bg-[#F6FBE9] p-6"
           >
             <h2 className="text-xl font-urbanistbold">{plan.name} plan</h2>
-            {showSize && (
-              <p className="flex items-center font-urbanistmedium mb-10 text-gray-500 text-[14px] sm:text[16px] 2xl:text-[18px]">
-                save 50% on Yearly
-              </p>
-            )}
+            <p className="flex items-center font-urbanistmedium mb-6 text-gray-500 text-[14px] sm:text[16px] 2xl:text-[18px]">
+              Up to 50% off on Yearly Plan
+            </p>
+
             {showSize && (
               <p className="text-gray-500 mb-4 text-[14px] sm:text[16px] 2xl:text-[18px]">
                 {plan.size}
               </p>
             )}
+
             <p className="text-4xl font-urbanistbold mb-4 flex items-center text-[#356554]">
               {plan.price}
               <span className="text-gray-500 text-sm">/month</span>
             </p>
 
-            {/* Only show features if showFeatures is true */}
             {showFeatures && (
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 bg-[#f1ffce] rounded-lg">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="text-gray-600">
+                  <li
+                    key={i}
+                    className="text-gray-600 border-b-2 border-[#eafbc9] p-4"
+                  >
                     ✅ {feature}
                   </li>
                 ))}
               </ul>
             )}
 
-            <button className="bg-[#CBEA7B] py-2 px-4 rounded-lg font-urbanistsemibold hover:bg-[#a7e114]">
+            
+        {showPremium && plan.name === "Ultimate" && (
+        <div className="bg-[#234338] text-white p-3 rounded-lg text-center mb-4">
+          The Premium Plan is designed for individuals who are committed to achieving significant results and require the highest level of support and personalization.
+        </div>
+      )}
+
+            <button className="bg-[#CBEA7B] py-2 px-4 rounded-lg font-urbanistsemibold hover:bg-[#a7e114] w-full">
               Choose Plan
             </button>
           </div>

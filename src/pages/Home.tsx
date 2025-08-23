@@ -9,14 +9,14 @@ import PricingPage from "../components/PricingPage";
 function Home() {
   return (
     <div className="">
-      <Header />
+     <div id="home"> <Header /></div>
       <div className=" mt-[120px] sm:mt-[100px]">
         <div className="sm:flex ">
           <div className="relative">
             <img
               src={face}
               alt="ball"
-              className=" h-full w-full relative rounded-b-4xl sm:rounded-b-none"
+              className=" h-full w-[2000px] relative rounded-b-4xl sm:rounded-b-none"
             />
             <div className=" sm:hidden flex justify-center items-center absolute  left-0 right-0 bottom-[-15%]">
               <CustomerStack />
@@ -55,7 +55,7 @@ function Home() {
       </div>
       <Features />
       <Blog />
-      <PricingPage showFeatures={false} showSize={true} />
+      <PricingPage showFeatures={false} showSize={true} showPremium={false} />
       <Footer />
     </div>
   );

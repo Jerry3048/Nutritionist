@@ -7,7 +7,7 @@ import OurStory from "../components/OurStory.tsx";
 function About() {
   return (
     <div className="">
-      <Header />
+       <div id="home"> <Header /></div>
       <div className="w-[90%] mx-auto space-y-10">
         <div className="h-[40vh] mt-[150px]">
           <img src={Biglogo} alt={Biglogo} className=" w-full h-full" />
