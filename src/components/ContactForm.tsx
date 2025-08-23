@@ -29,8 +29,8 @@ function ContactForm() {
   }
 
   return (
-    <div className=" bg-[#F6FBE9] w-[90%] mx-auto mt-5 flex justify-center items-center rounded-lg">
-      <div className="rounded-2xl w-full max-w-lg p-8">
+    <div className=" bg-[#F6FBE9] w-[90%] mx-auto mt-5 md:flex justify-center items-center rounded-lg">
+      <div className="rounded-2xl w-full max-w-lg p-8 mx-auto">
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Name */}
          <div className="flex justify-between items-center space-x-3">
@@ -110,12 +110,12 @@ function ContactForm() {
 
     
     
-        <div className="w-full flex flex-col">
+        <div className="w-[100%]  flex flex-col mr-4">
         {/* Map */}
         <iframe
             title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509232!2d144.9537363159046!3d-37.8172099797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAyLjAiUyAxNDTCsDU3JzE0LjAiRQ!5e0!3m2!1sen!2sus!4v1617752453564!5m2!1sen!2sus"
-            className="w-[380px] h-[300px] border-0 rounded-lg mx-auto"
+            className="w-full h-[300px] border-0 rounded-lg mx-auto"
             allowFullScreen={true}
             loading="lazy"
         ></iframe>
