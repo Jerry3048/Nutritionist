@@ -121,7 +121,7 @@ function ContactForm() {
         ></iframe>
 
         {/* Social Icons */}
-        <div className="flex justify-end mt-4 space-x-2 w-full pr-4">
+        <div className="flex justify-end mt-4 space-x-2 w-full pr-4 mb-2">
             <a
             href="https://facebook.com"
             target="_blank"
