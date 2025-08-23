@@ -33,7 +33,7 @@ const Navbar = () => {
         <img src={path1} alt="ball" className=" w-25 ml-[5%] hidden md:block" />
         <div className="flex justify-center items-center 2xl:text-[18px] sm:text-[16px] text-[14px]">
           <img src={ball} alt="ball" className="w-4 h-4 mr-1" />
-          <p className="font-urbanistsemibold ">
+          <p className="font-urbanistsemibold text-[10px] ">
             Join Our Personalized Nutrtion Demo For Free
           </p>
           <FaArrowRight className="ml-3" />
