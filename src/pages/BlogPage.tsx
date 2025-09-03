@@ -122,7 +122,7 @@ function BlogPage() {
         {/* <h1 className="flex justify-center font-urbanistbold text-[28px] sm:text-[38px]">
           {activeCategory === "All" ? "Our Blogs" : activeCategory}
         </h1> */}
-        <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {blogs.map((item, idx) => (
             <div key={idx} className="flex mx-auto w-full">
               <BlogCard {...item} showTitle={true} showWriter={false} />
